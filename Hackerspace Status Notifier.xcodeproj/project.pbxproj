@@ -13,6 +13,9 @@
 		1D937D4F1444DB4700C59A2F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D4D1444DB4700C59A2F /* Credits.rtf */; };
 		1D937D521444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D937D511444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m */; };
 		1D937D551444DB4D00C59A2F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D531444DB4D00C59A2F /* MainMenu.xib */; };
+		1D937D7C1444DF8300C59A2F /* status_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D7A1444DF8300C59A2F /* status_ok.png */; };
+		1D937D7D1444DF8300C59A2F /* status_not_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D7B1444DF8300C59A2F /* status_not_ok.png */; };
+		1D937D7F1444E4EB00C59A2F /* status_unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D7E1444E4EB00C59A2F /* status_unknown.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,17 @@
 		1D937D411444DB4300C59A2F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1D937D421444DB4300C59A2F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1D937D431444DB4300C59A2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D937D461444DB4500C59A2F /* Hackerspace Status Notifier-Info.plist */ = {isa = PBXFileReference; path = "Hackerspace Status Notifier-Info.plist"; sourceTree = "<group>"; };
+		1D937D461444DB4500C59A2F /* Hackerspace Status Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hackerspace Status Notifier-Info.plist"; sourceTree = "<group>"; };
 		1D937D481444DB4500C59A2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D937D4A1444DB4600C59A2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1D937D4C1444DB4600C59A2F /* Hackerspace Status Notifier-Prefix.pch */ = {isa = PBXFileReference; path = "Hackerspace Status Notifier-Prefix.pch"; sourceTree = "<group>"; };
+		1D937D4C1444DB4600C59A2F /* Hackerspace Status Notifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackerspace Status Notifier-Prefix.pch"; sourceTree = "<group>"; };
 		1D937D4E1444DB4700C59A2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1D937D501444DB4800C59A2F /* Hackerspace_Status_NotifierAppDelegate.h */ = {isa = PBXFileReference; path = Hackerspace_Status_NotifierAppDelegate.h; sourceTree = "<group>"; };
+		1D937D501444DB4800C59A2F /* Hackerspace_Status_NotifierAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hackerspace_Status_NotifierAppDelegate.h; sourceTree = "<group>"; };
 		1D937D511444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hackerspace_Status_NotifierAppDelegate.m; sourceTree = "<group>"; };
 		1D937D541444DB4D00C59A2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1D937D7A1444DF8300C59A2F /* status_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_ok.png; sourceTree = "<group>"; };
+		1D937D7B1444DF8300C59A2F /* status_not_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_not_ok.png; sourceTree = "<group>"; };
+		1D937D7E1444E4EB00C59A2F /* status_unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_unknown.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 		1D937D451444DB4500C59A2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D937D7A1444DF8300C59A2F /* status_ok.png */,
+				1D937D7E1444E4EB00C59A2F /* status_unknown.png */,
+				1D937D7B1444DF8300C59A2F /* status_not_ok.png */,
 				1D937D461444DB4500C59A2F /* Hackerspace Status Notifier-Info.plist */,
 				1D937D471444DB4500C59A2F /* InfoPlist.strings */,
 				1D937D4A1444DB4600C59A2F /* main.m */,
@@ -155,6 +164,9 @@
 				1D937D491444DB4500C59A2F /* InfoPlist.strings in Resources */,
 				1D937D4F1444DB4700C59A2F /* Credits.rtf in Resources */,
 				1D937D551444DB4D00C59A2F /* MainMenu.xib in Resources */,
+				1D937D7C1444DF8300C59A2F /* status_ok.png in Resources */,
+				1D937D7D1444DF8300C59A2F /* status_not_ok.png in Resources */,
+				1D937D7F1444E4EB00C59A2F /* status_unknown.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

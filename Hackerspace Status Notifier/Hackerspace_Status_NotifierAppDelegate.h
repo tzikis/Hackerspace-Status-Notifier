@@ -10,8 +10,13 @@
 
 @interface Hackerspace_Status_NotifierAppDelegate : NSObject <NSApplicationDelegate> {
 	NSWindow *window;
+	NSStatusItem* statusItem;
+	IBOutlet NSMenu *menu;
+	NSInteger status;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, assign) NSInteger status;
 
+-(void) check;
 @end
