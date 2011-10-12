@@ -11,30 +11,50 @@
 		1D937D491444DB4500C59A2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D471444DB4500C59A2F /* InfoPlist.strings */; };
 		1D937D4B1444DB4600C59A2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D937D4A1444DB4600C59A2F /* main.m */; };
 		1D937D4F1444DB4700C59A2F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D4D1444DB4700C59A2F /* Credits.rtf */; };
-		1D937D521444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D937D511444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m */; };
+		1D937D521444DB4900C59A2F /* Status_NotifierAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D937D511444DB4900C59A2F /* Status_NotifierAppDelegate.m */; };
 		1D937D551444DB4D00C59A2F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D531444DB4D00C59A2F /* MainMenu.xib */; };
 		1D937D7C1444DF8300C59A2F /* status_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D7A1444DF8300C59A2F /* status_ok.png */; };
 		1D937D7D1444DF8300C59A2F /* status_not_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D7B1444DF8300C59A2F /* status_not_ok.png */; };
 		1D937D7F1444E4EB00C59A2F /* status_unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D7E1444E4EB00C59A2F /* status_unknown.png */; };
+		1D937D8B144506A500C59A2F /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = 1D937D8A144506A500C59A2F /* Growl Registration Ticket.growlRegDict */; };
+		1D937D9D1445118C00C59A2F /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D937D9C1445118C00C59A2F /* Growl.framework */; };
+		1D937D9F144511C800C59A2F /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D937D9C1445118C00C59A2F /* Growl.framework */; };
+		1D937DA1144516CC00C59A2F /* status_notifier.icns in Resources */ = {isa = PBXBuildFile; fileRef = 1D937DA0144516CB00C59A2F /* status_notifier.icns */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1D937D9E144511B900C59A2F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D937D9F144511C800C59A2F /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1D937D3A1444DB4300C59A2F /* Hackerspace Status Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hackerspace Status Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D937D3A1444DB4300C59A2F /* Status Notifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Status Notifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D937D3E1444DB4300C59A2F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D937D411444DB4300C59A2F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1D937D421444DB4300C59A2F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1D937D431444DB4300C59A2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D937D461444DB4500C59A2F /* Hackerspace Status Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hackerspace Status Notifier-Info.plist"; sourceTree = "<group>"; };
+		1D937D461444DB4500C59A2F /* Status Notifier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Status Notifier-Info.plist"; sourceTree = "<group>"; };
 		1D937D481444DB4500C59A2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D937D4A1444DB4600C59A2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1D937D4C1444DB4600C59A2F /* Hackerspace Status Notifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackerspace Status Notifier-Prefix.pch"; sourceTree = "<group>"; };
+		1D937D4C1444DB4600C59A2F /* Status Notifier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Status Notifier-Prefix.pch"; sourceTree = "<group>"; };
 		1D937D4E1444DB4700C59A2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1D937D501444DB4800C59A2F /* Hackerspace_Status_NotifierAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hackerspace_Status_NotifierAppDelegate.h; sourceTree = "<group>"; };
-		1D937D511444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hackerspace_Status_NotifierAppDelegate.m; sourceTree = "<group>"; };
+		1D937D501444DB4800C59A2F /* Status_NotifierAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Status_NotifierAppDelegate.h; sourceTree = "<group>"; };
+		1D937D511444DB4900C59A2F /* Status_NotifierAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Status_NotifierAppDelegate.m; sourceTree = "<group>"; };
 		1D937D541444DB4D00C59A2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1D937D7A1444DF8300C59A2F /* status_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_ok.png; sourceTree = "<group>"; };
 		1D937D7B1444DF8300C59A2F /* status_not_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_not_ok.png; sourceTree = "<group>"; };
 		1D937D7E1444E4EB00C59A2F /* status_unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status_unknown.png; sourceTree = "<group>"; };
+		1D937D8A144506A500C59A2F /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		1D937D9C1445118C00C59A2F /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		1D937DA0144516CB00C59A2F /* status_notifier.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = status_notifier.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D937D3F1444DB4300C59A2F /* Cocoa.framework in Frameworks */,
+				1D937D9D1445118C00C59A2F /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +73,7 @@
 		1D937D2F1444DB3300C59A2F = {
 			isa = PBXGroup;
 			children = (
-				1D937D441444DB4300C59A2F /* Hackerspace Status Notifier */,
+				1D937D441444DB4300C59A2F /* Status Notifier */,
 				1D937D3D1444DB4300C59A2F /* Frameworks */,
 				1D937D3B1444DB4300C59A2F /* Products */,
 			);
@@ -61,7 +82,7 @@
 		1D937D3B1444DB4300C59A2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D937D3A1444DB4300C59A2F /* Hackerspace Status Notifier.app */,
+				1D937D3A1444DB4300C59A2F /* Status Notifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +90,7 @@
 		1D937D3D1444DB4300C59A2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D937D9C1445118C00C59A2F /* Growl.framework */,
 				1D937D3E1444DB4300C59A2F /* Cocoa.framework */,
 				1D937D401444DB4300C59A2F /* Other Frameworks */,
 			);
@@ -85,15 +107,15 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		1D937D441444DB4300C59A2F /* Hackerspace Status Notifier */ = {
+		1D937D441444DB4300C59A2F /* Status Notifier */ = {
 			isa = PBXGroup;
 			children = (
-				1D937D501444DB4800C59A2F /* Hackerspace_Status_NotifierAppDelegate.h */,
-				1D937D511444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m */,
+				1D937D501444DB4800C59A2F /* Status_NotifierAppDelegate.h */,
+				1D937D511444DB4900C59A2F /* Status_NotifierAppDelegate.m */,
 				1D937D531444DB4D00C59A2F /* MainMenu.xib */,
 				1D937D451444DB4500C59A2F /* Supporting Files */,
 			);
-			path = "Hackerspace Status Notifier";
+			path = "Status Notifier";
 			sourceTree = "<group>";
 		};
 		1D937D451444DB4500C59A2F /* Supporting Files */ = {
@@ -102,11 +124,13 @@
 				1D937D7A1444DF8300C59A2F /* status_ok.png */,
 				1D937D7E1444E4EB00C59A2F /* status_unknown.png */,
 				1D937D7B1444DF8300C59A2F /* status_not_ok.png */,
-				1D937D461444DB4500C59A2F /* Hackerspace Status Notifier-Info.plist */,
+				1D937DA0144516CB00C59A2F /* status_notifier.icns */,
+				1D937D461444DB4500C59A2F /* Status Notifier-Info.plist */,
 				1D937D471444DB4500C59A2F /* InfoPlist.strings */,
 				1D937D4A1444DB4600C59A2F /* main.m */,
-				1D937D4C1444DB4600C59A2F /* Hackerspace Status Notifier-Prefix.pch */,
+				1D937D4C1444DB4600C59A2F /* Status Notifier-Prefix.pch */,
 				1D937D4D1444DB4700C59A2F /* Credits.rtf */,
+				1D937D8A144506A500C59A2F /* Growl Registration Ticket.growlRegDict */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -114,21 +138,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D937D391444DB4300C59A2F /* Hackerspace Status Notifier */ = {
+		1D937D391444DB4300C59A2F /* Status Notifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D937D581444DB4D00C59A2F /* Build configuration list for PBXNativeTarget "Hackerspace Status Notifier" */;
+			buildConfigurationList = 1D937D581444DB4D00C59A2F /* Build configuration list for PBXNativeTarget "Status Notifier" */;
 			buildPhases = (
 				1D937D361444DB4300C59A2F /* Sources */,
 				1D937D371444DB4300C59A2F /* Frameworks */,
 				1D937D381444DB4300C59A2F /* Resources */,
+				1D937D9E144511B900C59A2F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Hackerspace Status Notifier";
-			productName = "Hackerspace Status Notifier";
-			productReference = 1D937D3A1444DB4300C59A2F /* Hackerspace Status Notifier.app */;
+			name = "Status Notifier";
+			productName = "Status Notifier";
+			productReference = 1D937D3A1444DB4300C59A2F /* Status Notifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +164,7 @@
 			attributes = {
 				ORGANIZATIONNAME = Tzikis;
 			};
-			buildConfigurationList = 1D937D341444DB3400C59A2F /* Build configuration list for PBXProject "Hackerspace Status Notifier" */;
+			buildConfigurationList = 1D937D341444DB3400C59A2F /* Build configuration list for PBXProject "Status Notifier" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -151,7 +176,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D937D391444DB4300C59A2F /* Hackerspace Status Notifier */,
+				1D937D391444DB4300C59A2F /* Status Notifier */,
 			);
 		};
 /* End PBXProject section */
@@ -167,6 +192,8 @@
 				1D937D7C1444DF8300C59A2F /* status_ok.png in Resources */,
 				1D937D7D1444DF8300C59A2F /* status_not_ok.png in Resources */,
 				1D937D7F1444E4EB00C59A2F /* status_unknown.png in Resources */,
+				1D937D8B144506A500C59A2F /* Growl Registration Ticket.growlRegDict in Resources */,
+				1D937DA1144516CC00C59A2F /* status_notifier.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D937D4B1444DB4600C59A2F /* main.m in Sources */,
-				1D937D521444DB4900C59A2F /* Hackerspace_Status_NotifierAppDelegate.m in Sources */,
+				1D937D521444DB4900C59A2F /* Status_NotifierAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +287,16 @@
 		1D937D591444DB4D00C59A2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../Projects/growl-dev/Release/distribution/SDK/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hackerspace Status Notifier/Hackerspace Status Notifier-Prefix.pch";
-				INFOPLIST_FILE = "Hackerspace Status Notifier/Hackerspace Status Notifier-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Status Notifier/Status Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Status Notifier/Status Notifier-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "Status Notifier";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +304,16 @@
 		1D937D5A1444DB4D00C59A2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../../Projects/growl-dev/Release/distribution/SDK/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hackerspace Status Notifier/Hackerspace Status Notifier-Prefix.pch";
-				INFOPLIST_FILE = "Hackerspace Status Notifier/Hackerspace Status Notifier-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Status Notifier/Status Notifier-Prefix.pch";
+				INFOPLIST_FILE = "Status Notifier/Status Notifier-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "Status Notifier";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -282,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D937D341444DB3400C59A2F /* Build configuration list for PBXProject "Hackerspace Status Notifier" */ = {
+		1D937D341444DB3400C59A2F /* Build configuration list for PBXProject "Status Notifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D937D561444DB4D00C59A2F /* Debug */,
@@ -291,13 +330,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D937D581444DB4D00C59A2F /* Build configuration list for PBXNativeTarget "Hackerspace Status Notifier" */ = {
+		1D937D581444DB4D00C59A2F /* Build configuration list for PBXNativeTarget "Status Notifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D937D591444DB4D00C59A2F /* Debug */,
 				1D937D5A1444DB4D00C59A2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
