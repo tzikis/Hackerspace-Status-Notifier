@@ -64,12 +64,25 @@
 	   [urlString appendString:@"?"];
 	   [urlString appendString:[[NSNumber numberWithLong:random()] stringValue]];
 
-		NSString* contents = [NSString stringWithContentsOfURL: [NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
+		NSError* error = nil;
+		NSString* contents = [NSString stringWithContentsOfURL: [NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:&error];
+		
 //		NSLog(@"Contents:\n%@", contents);
 		self.status = [contents integerValue];
 		
-		if(status != 1 && status != 0)
+		if(error != nil)
+		{
+			NSLog(@"Could not connect to URL");
+			sleep(10);
 			continue;
+		}
+		else if(status != 1 && status != 0)
+		{
+			NSLog(@"Status is invalid: %ld", status);
+			sleep(10);
+			continue;
+			
+		}
 		
 		if(oldStatus != status)
 		{
