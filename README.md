@@ -7,16 +7,24 @@ The program starts with an unknown status (Yellow icon) and checks for the value
 
 ## Disabling subsystems
 The user can also disable the statusbar (menu) icon and/or the Growl notification if he wishes by editing the user defaults from the Terminal. For example, to disable the statusbar icon one needs to type:
-    defaults write com.tzikis.Status-Notifier -boolean disableMenu true
+
+`defaults write com.tzikis.Status-Notifier -boolean disableMenu true`
+
 To disable the growl notifications:
+
 `defaults write com.tzikis.Status-Notifier -boolean disableNotifications true`
 
 If you wish to re-enable any of the above, you just have to replace **true** with **false**.
 
 ## Replacing URL and notification strings
 You can also use your own URL, Title (for the notifications), and Description for the On and Off notifications. For example, to use a different URL:
+
 `defaults write com.tzikis.Status-Notifier URL http://p-space.gr/status/`
+
 And to set the Title, On Description, and Off Description accordingly:
+
 `defaults write com.tzikis.Status-Notifier Title "My Epic Status Notification App"`
+
 `defaults write com.tzikis.Status-Notifier OnTitle "The awesome thing i made is On"`
+
 `defaults write com.tzikis.Status-Notifier OffTitle "The awesome thing i made is Off"`
