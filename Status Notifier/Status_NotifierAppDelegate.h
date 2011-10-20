@@ -15,10 +15,18 @@
 	NSStatusItem* statusItem;
 	IBOutlet NSMenu *menu;
 	NSInteger status;
+	NSString* URL;
+	NSString* Title;
+	NSString* OnTitle;
+	NSString* OffTitle;
+	BOOL disableMenu;
+	BOOL disableNotifications;
 }
 
 @property (assign) IBOutlet NSWindow *window;
 @property (nonatomic, assign) NSInteger status;
 
--(void) check;
+-(void) checkStatus;
+-(void) checkDefaults;
+-(void) initMenu;
 @end

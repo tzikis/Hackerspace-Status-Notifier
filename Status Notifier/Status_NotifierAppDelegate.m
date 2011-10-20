@@ -16,26 +16,14 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	// Insert code here to initialize your application
-	
-	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-	[statusItem setMenu:menu];
-	
-	NSString* icon_path = [[NSBundle mainBundle] pathForResource:@"status_unknown" ofType:@"png"];
-	NSImage *icon = [[NSImage alloc] initWithContentsOfFile:icon_path];
-	
-	[statusItem setImage:icon];
-	[icon release];
-	
-	[statusItem setHighlightMode:YES];
+	[self checkDefaults];
 
-	//run the listener to the new thread
-	[NSThread detachNewThreadSelector:@selector(check)
-							 toTarget:self
-						   withObject:nil];
+	[self initMenu];
+	
 	[GrowlApplicationBridge setGrowlDelegate:self];
-
+	
 	//send the apropriate growl notification
-	[GrowlApplicationBridge notifyWithTitle: @"Hackerspace Status Notifier"
+	[GrowlApplicationBridge notifyWithTitle: Title
 								description: @"Started"
 						   notificationName: @"starting"
 								   iconData: nil
@@ -44,10 +32,15 @@
 							   clickContext:nil
 								 identifier:@"status changed"];
 
+	//run the listener to the new thread
+	[NSThread detachNewThreadSelector:@selector(checkStatus)
+							 toTarget:self
+						   withObject:nil];
+
 }
 
 //starts the listener and blocks the current thread, waiting for events
--(void) check
+-(void) checkStatus
 {
 	//the new thread needs to have its own autorelease pool
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
@@ -64,7 +57,7 @@
 
 	while(true)
 	{
-		NSMutableString *urlString = [NSMutableString stringWithString:@"http://p-space.gr/status/"];
+		NSMutableString *urlString = [NSMutableString stringWithString:URL];
 							   
 	   // append a "?2345" where 2345 is actually a random number; forces
 	   // proxy servers to fetch a fresh version of the file.
@@ -75,24 +68,29 @@
 //		NSLog(@"Contents:\n%@", contents);
 		self.status = [contents integerValue];
 		
+		if(status != 1 && status != 0)
+			continue;
+		
 		if(oldStatus != status)
 		{
 			NSLog(@"New status: %ld", status);
-			[[statusItem image] release];
-			if(status == 1)
-				[statusItem setImage:ok];
-			else
-				[statusItem setImage:not_ok];
+			if(statusItem != nil)
+			{
+				[[statusItem image] release];
+				status == 1 ? [statusItem setImage:ok] : [statusItem setImage:not_ok];
+			}
 			
-			[GrowlApplicationBridge notifyWithTitle: @"Hackerspace "@"Status Notifier"
-										description: status == 1? @"Hackerspace Open" : @"Hackerspace Closed"
-								   notificationName: status == 1? @"status on" : @"status off"
-										   iconData: nil
-										   priority: 0
-										   isSticky: NO
-									   clickContext:nil
-										 identifier:@"status changed"];
-
+			if(!disableNotifications)
+			{
+				[GrowlApplicationBridge notifyWithTitle: Title
+											description: status == 1? OnTitle : OffTitle
+									   notificationName: status == 1? @"status on" : @"status off"
+											   iconData: nil
+											   priority: 0
+											   isSticky: NO
+										   clickContext:nil
+											 identifier:@"status changed"];
+			}
 			
 		}
 		oldStatus = status;
@@ -103,4 +101,46 @@
 
 }
 
+-(void) checkDefaults
+{
+	
+	URL = [[NSUserDefaults standardUserDefaults] stringForKey:@"URL"];
+	if(URL == nil)
+		URL = @"http://p-space.gr/status/";
+	
+	Title = [[NSUserDefaults standardUserDefaults] stringForKey:@"Title"];
+	if(Title == nil)
+		Title = @"Hackerspace Status Notifier";
+	
+	OnTitle = [[NSUserDefaults standardUserDefaults] stringForKey:@"OnTitle"];
+	if(OnTitle == nil)
+		OnTitle = @"Hackerspace Open";
+
+		OffTitle = [[NSUserDefaults standardUserDefaults] stringForKey:@"OffTitle"];
+	if(OffTitle == nil)
+		OffTitle = @"Hackerspace Closed";
+	
+	disableMenu = [[NSUserDefaults standardUserDefaults] boolForKey:@"DisableMenu"];
+	disableNotifications = [[NSUserDefaults standardUserDefaults] boolForKey:@"DisableNotifications"];
+	
+}
+
+-(void) initMenu
+{
+	if(!disableMenu)
+	{
+		statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+		[statusItem setMenu:menu];
+		
+		NSString* icon_path = [[NSBundle mainBundle] pathForResource:@"status_unknown" ofType:@"png"];
+		NSImage *icon = [[NSImage alloc] initWithContentsOfFile:icon_path];
+		
+		[statusItem setImage:icon];
+		[icon release];
+		
+		[statusItem setHighlightMode:YES];
+	}
+	else
+		statusItem = nil;
+}
 @end
